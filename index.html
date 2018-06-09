@@ -511,7 +511,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
 
 <script>
   $( document ).ready(function() {
-    console.log( "Deploy 2!" );
+    console.log( "Deploy 3!" );
     var offsets = $("#audio-progress").offset();
     $('#audio-progress-handle').offset({top:offsets.top-10});
 
@@ -555,10 +555,11 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
         console.log("salah");
       }
       else {
+        console.log(xPos)
         $.ajax({
           method: 'POST',
           url: 'https://formspree.io/zulia171@gmail.com',
-          data: {message:"Seseorang melakukan vote!"+ xPos},
+          data: {message:"Seseorang melakukan vote!"+ xPos + "%"},
           datatype: 'json'
         });
 
