@@ -511,7 +511,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
 
 <script>
   $( document ).ready(function() {
-    console.log( "Deploy 3!" );
+    console.log( "Deploy 4!" );
     var offsets = $("#audio-progress").offset();
     $('#audio-progress-handle').offset({top:offsets.top-10});
 
@@ -550,7 +550,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       console.log("hehe");
       var offsets = $("#audio-progress").offset();
       var widths = $("#audio-progress").width();
-      var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
+      var xPos = (((parseFloat($('#draggable-point').css("left"))-offsets.left)/widths))*100+ "%";
       if(xPos=='undefined') {
         console.log("salah");
       }
