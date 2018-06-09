@@ -350,7 +350,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
 }
 .audio-progress .bar {
   height: 100%;
-  background-color: #E95F74;
+  background-image: linear-gradient(to right, #4e3b20, #654923, #7d5727, #97642b, #b3722f);
 }
 
 #audio-progress-handle {
@@ -385,13 +385,21 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
 .button-container {
     position: relative;
     /* top: 50%; */
-    left: 45%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding: 50%;
     margin-top: 50px;
     justify-content: center;
     background:transparent;
+    border-color: transparent;
+}
+.form{
+  height: 50%;
+
+}
+
+.about {
+  height: 100%;
 }
 
 .btn {
@@ -412,7 +420,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
   content: '';
   display: inline-block;
   background: #3bade3;
-  background: linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+  background: linear-gradient(45deg, #526436 0%, #666a2f 25%, #7d6f2a 51%, #b3722f 100%);
   height: 50px;
   width: 372px;
   z-index: -1;
@@ -476,7 +484,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
     <section class='section-2'>
       <div class='about'>
         <div class="h2"> How Much Do You Know About Me?</div>
-        <form id ="form">
+        <form id ="form" class="form">
           <div class="vote">
             <div id="audio-player-container">
               <div class="audio-progress" id="audio-progress">
@@ -502,7 +510,14 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <script>
-    $('#draggable-point').draggable({
+  $( document ).ready(function() {
+    console.log( "ready!" );
+    var offsets = $("#audio-progress").offset();
+    $('#audio-progress-handle').offset({top:offsets.top-10});
+
+  });
+
+  $('#draggable-point').draggable({
     axis: 'x',
     containment: "#audio-progress"
   });
@@ -510,11 +525,18 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
   $('#draggable-point').draggable({
     drag: function() {
       var offset = $(this).offset();
-      //var xPos = (100 * parseFloat($(this).css("left"))) / (parseFloat($(this).parent().css("width"))) + "%";
+      var offsetAudio = $('#audio-progress-bar').offset();
       var widths = $("#audio-progress").width();
       var offsets = $("#audio-progress").offset();
-      console.log(offsets.left+"haha");
-      console.log(offsets.top+"hihi");
+
+      var offsetAudioProgressHandle = $('#audio-progress-handle').offset();
+
+      $('#audio-progress-handle').offset({top:offsets.top-10});
+      //var xPos = (100 * parseFloat($(this).css("left"))) / (parseFloat($(this).parent().css("width"))) + "%";
+     
+      console.log(offsets.top+"where");
+      console.log(offsetAudioProgressHandle.top+"bar");
+
       console.log(widths)
       var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
 
@@ -523,29 +545,6 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       });
     }
   });
-
-  $(".button-container").submit(function(e){
-    var offsets = $("#audio-progress").offset();
-    var widths = $("#audio-progress").width();
-    var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
-    console.log("HAH");
-    
-    if(xPos=='0%') {
-        $('.submit-fail').fadeToggle(400);
-        return false;
-      }
-      else {
-        $.ajax({
-          method: 'POST',
-          url: '//formspree.io/zulia171@gmail.com',
-          data:{message:"HEU"},
-          datatype: 'json'
-        });
-        e.preventDefault();
-        $(this).get(0).reset();
-        $('.submit-success').fadeToggle(400);
-      }
-    });
 
     $('#form').submit(function(e) {
       console.log("hehe");
@@ -559,15 +558,13 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
         $.ajax({
           method: 'POST',
           url: 'https://formspree.io/zulia171@gmail.com',
-          data: {message:"Hai"},
+          data: {message:xPos
+          },
           datatype: 'json'
         });
 
         e.preventDefault();
         e.stopPropagation();
-        /*e.preventDefault();
-        $(this).get(0).reset();
-        $('.submit-success').fadeToggle(400);*/
       }
     });
 </script>
