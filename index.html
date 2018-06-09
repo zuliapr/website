@@ -190,9 +190,41 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       }
       #master-container-scroller .master-container-scroller_item {
           padding-bottom: 0;
-          -webkit-animation: scroll-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-          animation: scroll-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+          -webkit-animation: scroll-mobile 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+          animation: scroll-mobile 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
       }
+
+      @keyframes scroll-mobile {
+      0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        }
+        20.1111% {
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+        }
+        40.8148% {
+            -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+        }
+        60.2222% {
+            -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+        }
+        80.9259% {
+            -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+        }
+        90.3333% {
+            -webkit-transform: translateY(-210px);
+            transform: translateY(-210px);
+        }
+        100.0% {
+            -webkit-transform: translateY(-240px);
+            transform: translateY(-240px);
+        }
+      }
+    }
   }
 
   #master-container-grid .master-container-grid_item .grid_item-overlay {
@@ -252,6 +284,95 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
           text-decoration: underline
       }
   }
+ @media screen and (max-width: 512px) {
+    @keyframes scroll {
+      0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        }
+        15.1111% {
+            -webkit-transform: translateY(-66px);
+            transform: translateY(-66px);
+        }
+        25.8148% {
+            -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+        }
+        34.2222% {
+            -webkit-transform: translateY(-132px);
+            transform: translateY(-132px);
+        }
+        50.9259% {
+            -webkit-transform: translateY(-132px);
+            transform: translateY(-132px);
+        }
+        60.3333% {
+            -webkit-transform: translateY(-198px);
+            transform: translateY(-198px);
+        }
+        70.037% {
+            -webkit-transform: translateY(-198px);
+            transform: translateY(-198px);
+        }
+        80.4444% {
+            -webkit-transform: translateY(-264px);
+            transform: translateY(-264px);
+        }
+        89.1481% {
+            -webkit-transform: translateY(-264px);
+            transform: translateY(-264px);
+        }
+        100% {
+            -webkit-transform: translateY(-330px);
+            transform: translateY(-330px);
+    }
+   }
+ }
+
+ @media screen and (max-width: 323px) {
+    @keyframes scroll {
+      0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        }
+        15.1111% {
+            -webkit-transform: translateY(-66px);
+            transform: translateY(-66px);
+        }
+        25.8148% {
+            -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+        }
+        34.2222% {
+            -webkit-transform: translateY(-132px);
+            transform: translateY(-132px);
+        }
+        50.9259% {
+            -webkit-transform: translateY(-132px);
+            transform: translateY(-132px);
+        }
+        60.3333% {
+            -webkit-transform: translateY(-198px);
+            transform: translateY(-198px);
+        }
+        70.037% {
+            -webkit-transform: translateY(-198px);
+            transform: translateY(-198px);
+        }
+        80.4444% {
+            -webkit-transform: translateY(-264px);
+            transform: translateY(-264px);
+        }
+        89.1481% {
+            -webkit-transform: translateY(-264px);
+            transform: translateY(-264px);
+        }
+        100% {
+            -webkit-transform: translateY(-330px);
+            transform: translateY(-330px);
+    }
+   }
+ }
 
  /* @-webkit-keyframes scroll {
       0.0% {
@@ -557,7 +678,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       else {
         console.log(xPos)
         $.ajax({
-          method: 'POST',
+          method: 'POST',   
           url: 'https://formspree.io/zulia171@gmail.com',
           data: {message:"Seseorang melakukan vote!"+ xPos + "%"},
           datatype: 'json'
