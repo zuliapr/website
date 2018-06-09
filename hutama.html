@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Copse|Josefin+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Copse|Josefin+Slab|Vast+Shadow" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oranienbaum|Permanent+Marker" rel="stylesheet">
+<style>
+html{
+  width: 100%;
+  background-image: linear-gradient(to left top, #526436, #666a2f, #7d6f2a, #977229, #b3722f);
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body{
+  margin:auto;
+  
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 0px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 9px;
+  text-decoration: none;
+  font-size: 22px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: 'Copse', serif;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:after {
+  border-bottom: 3px solid #4b5d90;
+  content: "";
+  display: block;
+  margin: 0.25em auto 0;
+  transition: width 250ms ease-in-out 0s;
+  width: 0;
+}
+.header a:hover:after{
+  transition: width 100ms ease-in-out 0s;
+  width: 100%;
+}
+
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,.section-1,summary,time,mark,audio,video {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       outline: 0;
+       font-size: 100%;
+       vertical-align: baseline;
+       background: transparent;
+       font-family: 'Oranienbaum', serif;
+   }
+
+   .h2{
+    text-align: center;
+    padding-top: 300px;
+    font-size: 50px;
+    font-family: 'Oranienbaum', serif;
+
+   }
+
+   .section-1{
+      min-height: 500px;
+   }
+
+   .section-2{
+      height: 900px;
+      background-image: url("tree1.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+   }
+
+   .master-container-scroller_item a {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       font-size: 100%;
+       vertical-align: baseline;
+       background: transparent;
+       text-decoration: none;
+       color:black;
+   }
+
+
+   #master {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 60px;
+      line-height: 1;
+      font-weight: bold;
+      letter-spacing: 0;
+      -webkit-font-smoothing: inherit
+  }
+
+  #master {
+      text-rendering: optimizeLegibility
+  }
+
+  #master-container {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 100vmin;
+      min-height: 0;
+      max-height: 100%;
+  }
+
+  #master-container .content {
+      height: auto;
+      margin-left: inherit;
+      margin-right: inherit
+  }
+
+  @media screen and (max-width: 615px) {
+      #master-container {
+          -webkit-animation: master-container-bg-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+          animation: master-container-bg-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+      }
+  }
+
+  @media screen and (max-width: 615px) {
+      #master {
+          font-size: 40px;
+          font-line: 1.2
+      }
+  }
+
+  #master-container-scroller {
+      height: 66px;
+      margin-bottom: -6px;
+      overflow: hidden;
+      position: relative
+  }
+
+  #master-container-scroller .master-container-scroller_item {
+      display: block;
+      padding-bottom: 6px;
+      -webkit-animation: scroll 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+      animation: scroll 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+  }
+
+
+  @media screen and (max-width: 615px) {
+      #master-container-scroller {
+          height: 48px;
+          line-height: 1.2;
+          margin-bottom: 0
+      }
+      #master-container-scroller .master-container-scroller_item {
+          padding-bottom: 0;
+          -webkit-animation: scroll-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+          animation: scroll-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+      }
+  }
+
+  #master-container-grid .master-container-grid_item .grid_item-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      text-decoration: none
+  }
+
+  #master-container-grid .master-container-grid_item .grid_item-overlay:hover {
+      opacity: 1
+  }
+
+  #master-container-grid .master-container-grid_item .grid_item-overlay .link {
+      display: inline-block;
+      box-shadow: 0 1px 0 0 #fff, inset 0 0 0 #fff;
+      transition: box-shadow .2s ease
+  }
+
+  #master-container-grid .master-container-grid_item .grid_item-overlay .link:hover {
+      box-shadow: 0 2px 0 0 #fff, inset 0 -1px 0 0 #fff
+  }
+
+  @media screen and (max-width: 520px) {
+      #master-container-grid .master-container-grid_item {
+          margin-bottom: 18px
+      }
+      #master-container-grid .master-container-grid_item .grid_item-overlay {
+          position: relative;
+          background: none !important;
+          color: #3a3a3a;
+          opacity: 1;
+          display: block;
+          margin-top: 18px;
+          text-align: left
+      }
+      #master-container-grid .master-container-grid_item .grid_item-overlay .link {
+          box-shadow: none
+      }
+      #master-container-grid .master-container-grid_item .grid_item-overlay .link:hover {
+          text-decoration: underline
+      }
+  }
+
+ /* @-webkit-keyframes scroll {
+      0.0% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      16.67% {
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px)
+      }
+      11.11111111111111% {
+          -webkit-transform: translateY(-66px);
+          transform: translateY(-66px)
+      }
+      14.814814814814815% {
+          -webkit-transform: translateY(-70px);
+          transform: translateY(-70px)
+      }
+      22.22222222222222% {
+          -webkit-transform: translateY(-132px);
+          transform: translateY(-132px)
+      }
+      25.925925925925927% {
+          -webkit-transform: translateY(-132px);
+          transform: translateY(-132px)
+      }
+      33.333333333333336% {
+          -webkit-transform: translateY(-198px);
+          transform: translateY(-198px)
+      }
+      37.03703703703704% {
+          -webkit-transform: translateY(-198px);
+          transform: translateY(-198px)
+      }
+      44.44444444444444% {
+          -webkit-transform: translateY(-264px);
+          transform: translateY(-264px)
+      }
+      48.148148148148145% {
+          -webkit-transform: translateY(-264px);
+          transform: translateY(-264px)
+      }
+      100.0% {
+          -webkit-transform: translateY(-330px);
+          transform: translateY(-330px)
+      }
+  }*/
+
+  @keyframes scroll {
+
+      0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+  15.1111% {
+      -webkit-transform: translateY(-66px);
+      transform: translateY(-66px);
+  }
+  25.8148% {
+      -webkit-transform: translateY(-70px);
+      transform: translateY(-70px);
+  }
+  34.2222% {
+      -webkit-transform: translateY(-132px);
+      transform: translateY(-132px);
+  }
+  50.9259% {
+      -webkit-transform: translateY(-132px);
+      transform: translateY(-132px);
+  }
+  60.3333% {
+      -webkit-transform: translateY(-198px);
+      transform: translateY(-198px);
+  }
+  70.037% {
+      -webkit-transform: translateY(-198px);
+      transform: translateY(-198px);
+  }
+  80.4444% {
+      -webkit-transform: translateY(-264px);
+      transform: translateY(-264px);
+  }
+  89.1481% {
+      -webkit-transform: translateY(-264px);
+      transform: translateY(-264px);
+  }
+  100% {
+      -webkit-transform: translateY(-330px);
+      transform: translateY(-330px);
+  }
+}
+.audio-progress {
+  height: .5rem;
+  width: 100%;
+  background-color: #C0C0C0;
+}
+.audio-progress .bar {
+  height: 100%;
+  background-color: #E95F74;
+}
+
+#audio-progress-handle {
+  display: block;
+  position:absolute;
+  z-index: 1;
+  margin-top: -5px;
+  margin-left: -10px;
+  width: 10px;
+  height: 10px;
+  border: 4px solid #D3D5DF;
+  border-top-color: #D3D5DF;
+  border-right-color: #D3D5DF;
+  transform: rotate(45deg);
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  cursor:pointer;
+}
+
+.draggable {
+  float: left; margin: 0 10px 10px 0;
+}
+
+.vote{
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.button-container {
+    position: relative;
+    /* top: 50%; */
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 50%;
+    margin-top: 50px;
+    justify-content: center;
+    background:transparent;
+}
+
+.btn {
+  display: block;
+  height: 50px;
+  width: 186px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+.btn:after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background: #3bade3;
+  background: linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+  height: 50px;
+  width: 372px;
+  z-index: -1;
+  -webkit-transform: translateX(-280px);
+          transform: translateX(-280px);
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+}
+.btn:hover:after {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+.btn span {
+  position: relative;
+  top: 16px;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="#default" class="logo">CompanyLogo</a>
+      <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+  </div>
+  <div class="container-body">
+    <section class='section-1'>
+        <div class='masthead-image' id='master-container'>
+            <div class='content center'>
+                <h1 id='master'>
+                  <div>Hi. Welcome to my</div>
+                  <div id='master-container-scroller'>
+                    <div class='master-container-scroller_item'>
+                      <a class='cta-link' href='#'>Website</a>
+                    </div>
+                    <div class='master-container-scroller_item'>
+                      <a class='cta-link' href='#'>Life</a>
+                    </div>
+                    <div class='master-container-scroller_item'>
+                      <a class='cta-link' href='#'>Profile</a>
+                    </div>
+                    <div class='master-container-scroller_item'>
+                      <a class='cta-link' href='#'>Story</a>
+                    </div>
+                    <div class='master-container-scroller_item'>
+                      <a class='cta-link' href='#'>Love</a>
+                    </div>
+                    <div class='master-container-scroller_item'>
+                      <a class='cta-link' href='#'>Family</a>
+                    </div>
+                  <div>Nice to see you.</div>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class='section-2'>
+      <div class='about'>
+        <div class="h2"> How Much Do You Know About Me?</div>
+        <form id ="form">
+          <div class="vote">
+            <div id="audio-player-container">
+              <div class="audio-progress" id="audio-progress">
+                <div id="draggable-point" style="left:75%;position:absolute;" class="draggable ui-widget-content">
+                  <div id="audio-progress-handle"></div>
+                </div>
+                <div id="audio-progress-bar" class="bar" style="width:75%"></div>
+              </div>
+            </div>
+            <div id="posX"></div>
+          </div>
+        <button class="button-container" type="submit" value="Send">
+        <a href="#" class="btn" type="submit" value="Send"><span>SUBMIT</span></a>
+      </button>
+      <!--<div class="btn btn-default" type="submit" value="Send">Submit</div>!-->
+    </form>
+    </div>
+    </section>
+  </div>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    $('#draggable-point').draggable({
+    axis: 'x',
+    containment: "#audio-progress"
+  });
+
+  $('#draggable-point').draggable({
+    drag: function() {
+      var offset = $(this).offset();
+      //var xPos = (100 * parseFloat($(this).css("left"))) / (parseFloat($(this).parent().css("width"))) + "%";
+      var widths = $("#audio-progress").width();
+      var offsets = $("#audio-progress").offset();
+      console.log(offsets.left+"haha");
+      console.log(offsets.top+"hihi");
+      console.log(widths)
+      var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
+
+      $('#audio-progress-bar').css({
+        'width': xPos
+      });
+    }
+  });
+
+  $(".button-container").submit(function(e){
+    var offsets = $("#audio-progress").offset();
+    var widths = $("#audio-progress").width();
+    var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
+    console.log("HAH");
+    
+    if(xPos=='0%') {
+        $('.submit-fail').fadeToggle(400);
+        return false;
+      }
+      else {
+        $.ajax({
+          method: 'POST',
+          url: '//formspree.io/zulia171@gmail.com',
+          data:{message:"HEU"},
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        $('.submit-success').fadeToggle(400);
+      }
+    });
+
+    $('#form').submit(function(e) {
+      console.log("hehe");
+      var offsets = $("#audio-progress").offset();
+      var widths = $("#audio-progress").width();
+      var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
+      if(xPos=='undefined') {
+        console.log("salah");
+      }
+      else {
+        $.ajax({
+          method: 'POST',
+          url: 'https://formspree.io/zulia171@gmail.com',
+          data: {message:"Hai"},
+          datatype: 'json'
+        });
+
+        e.preventDefault();
+        e.stopPropagation();
+        /*e.preventDefault();
+        $(this).get(0).reset();
+        $('.submit-success').fadeToggle(400);*/
+      }
+    });
+</script>
