@@ -572,6 +572,16 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
   top: 16px;
 }
 
+.text-area {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    margin-left: 300px;
+}
+
 </style>
 </head>
 <body>
@@ -616,7 +626,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
     <section class='section-2'>
       <div class='about'>
         <div class="h2"> How Much Do You Know About Me?</div>
-        <form id ="form" class="form">
+        <form id ="form" class="form" method="POST" action="https://formspree.io/zulia171@gmail.com">
           <div class="vote">
             <div id="audio-player-container">
               <div class="audio-progress" id="audio-progress">
@@ -624,6 +634,7 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
                   <div id="audio-progress-handle"></div>
                 </div>
                 <div id="audio-progress-bar" class="bar" style="width:75%"></div>
+                <textarea class="text-area" id="text-area" name="number"></textarea>
               </div>
             </div>
             <div id="posX"></div>
@@ -684,12 +695,14 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       console.log(widths)
       var xPos = (((parseFloat($(this).css("left"))-offsets.left)/widths))*100+ "%";
 
+      $("#text-area").val(xPos)
+
       $('#audio-progress-bar').css({
         'width': xPos
       });
     }
   });
-
+/*
     $('#form').submit(function(e) {
       console.log("hehe");
       var offsets = $("#audio-progress").offset();
@@ -712,4 +725,5 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
     });
 
 
+*/
 </script>
