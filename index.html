@@ -104,6 +104,18 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+   }
+
+   .section-3{
+    height: 400px;
+   }
+   .section-4{
+    height: 900px;
+    background-image: url("lovetree1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
    }
 
@@ -560,7 +572,6 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
   top: 16px;
 }
 
-
 </style>
 </head>
 <body>
@@ -623,16 +634,23 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
     </form>
     </div>
     </section>
+    <section class='section-3'>
+
+    </section>
+    <section class='section-4'>
+      <div class="walam" id="walam">"...walam akun bidu'aa-ika rabbi syaqiyyaa"</div>
+    </section>
   </div>
 </body>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="jquery.ui.touch-punch.min.js"></script>
 
 <script>
   $( document ).ready(function() {
-    console.log( "Deploy 4!" );
+    console.log( "Deploy 5!" );
     var offsets = $("#audio-progress").offset();
     $('#audio-progress-handle').offset({top:offsets.top-10});
 
@@ -687,4 +705,6 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
         e.preventDefault();
       }
     });
+
+
 </script>
