@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Copse|Josefin+Slab" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Copse|Josefin+Slab|Vast+Shadow" rel="stylesheet">
@@ -166,20 +166,6 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       margin-right: inherit
   }
 
-  @media screen and (max-width: 615px) {
-      #master-container {
-          -webkit-animation: master-container-bg-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-          animation: master-container-bg-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
-      }
-  }
-
-  @media screen and (max-width: 615px) {
-      #master {
-          font-size: 40px;
-          font-line: 1.2
-      }
-  }
-
   #master-container-scroller {
       height: 66px;
       margin-bottom: -6px;
@@ -206,12 +192,25 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
           -webkit-animation: scroll-mobile 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
           animation: scroll-mobile 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
       }
-      .text-area-s{
-        width: 40px;
+      textarea.text-area-s{
+        width: 300px;
       }
 
-      .text-area-s-s{
-        width: 40px;
+      textarea.text-area-s-s{
+        width: 300px;
+      }
+
+      button.custom-btn.btn-6{
+        margin-left: 35%;
+      }
+
+      #master-container {
+          -webkit-animation: master-container-bg-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+          animation: master-container-bg-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+      }
+       #master {
+          font-size: 40px;
+          font-line: 1.2
       }
 
 
@@ -306,12 +305,18 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       }
   }
  @media screen and (max-width: 512px) {
-    .text-area-s{
-        width: 40px;
+      textarea.text-area-s{
+        width: 290px;
+      margin: 0% 9%;
       }
 
-      .text-area-s-s{
-        width: 40px;
+      textarea.text-area-s-s{
+        width: 290px;
+        margin: 0% 9%;
+      }
+
+      button.custom-btn.btn-6{
+        margin-left: 30%;
       }
     @keyframes scroll {
       0% {
@@ -358,14 +363,19 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
  }
 
  @media screen and (max-width: 323px) {
-      .text-area-s{
-        width: 40px;
+      textarea.text-area-s{
+        width: 200px;
       }
 
-      .text-area-s-s{
-        width: 40px;
+      textarea.text-area-s-s{
+        width: 200px;
       }
-    @keyframes scroll {
+
+      button.custom-btn.btn-6{
+        margin-left: 32%;
+         margin-top: 0px;
+      }
+      @keyframes scroll {
       0% {
         -webkit-transform: translateY(0px);
         transform: translateY(0px);
