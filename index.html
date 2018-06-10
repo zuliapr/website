@@ -595,14 +595,19 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
   transition: -webkit-transform 400ms ease-in;
   transition: transform 400ms ease-in;
   transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  cursor: pointer;
 }
 .btn:hover:after {
   -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
+  transform: translateX(-200px);
+  cursor: pointer;
 }
 .btn span {
   position: relative;
   top: 16px;
+}
+.btn:hover{
+  cursor: pointer;
 }
 
 .text-area {
@@ -651,6 +656,15 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
     font-size: 30px;
     text-align: center;
     padding: 20px;
+}
+
+.title-about{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    margin-top: px;
+    padding-top: 160px;
+    color: #C4A462;
 }
 
 .custom-btn {
@@ -773,6 +787,12 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
   font-family: 'Mountains of Christmas', cursive;
 }
 
+.text-about{
+  text-align: center;
+  font-size: 22px;
+  color: #8BA163;
+}
+
 </style>
 </head>
 <body>
@@ -789,25 +809,25 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
         <div class='masthead-image' id='master-container'>
             <div class='content center'>
                 <h1 id='master'>
-                  <div>Hi. Welcome to my</div>
+                  <div>Hi. Welcome to</div>
                   <div id='master-container-scroller'>
                     <div class='master-container-scroller_item'>
                       <a class='cta-link' href='#'>Website</a>
                     </div>
                     <div class='master-container-scroller_item'>
-                      <a class='cta-link' href='#'>Life</a>
+                      <a class='cta-link' href='#'>That</a>
                     </div>
                     <div class='master-container-scroller_item'>
-                      <a class='cta-link' href='#'>Profile</a>
+                      <a class='cta-link' href='#'>Connects</a>
                     </div>
                     <div class='master-container-scroller_item'>
-                      <a class='cta-link' href='#'>Story</a>
+                      <a class='cta-link' href='#'>You</a>
                     </div>
                     <div class='master-container-scroller_item'>
-                      <a class='cta-link' href='#'>Love</a>
+                      <a class='cta-link' href='#'>and</a>
                     </div>
                     <div class='master-container-scroller_item'>
-                      <a class='cta-link' href='#'>Family</a>
+                      <a class='cta-link' href='#'>Me</a>
                     </div>
                   <div>Nice to see you.</div>
                 </h1>
@@ -845,6 +865,8 @@ div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code
       </form>
     </section>
     <section class='section-4'>
+      <div><h1 class="title-about">About Zulia</h1></div>
+      <p class="text-about">Hai.</p>
     </section>
   </div>
 </body>
